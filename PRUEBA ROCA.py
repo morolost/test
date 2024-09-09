@@ -10,13 +10,14 @@ for i in range(3):
 print(numeros)
 
 os.system("pause")
+os.system("cls")
 
 for numero in numeros[:]:  
     if numero <= 0:
         numeros.remove(numero) 
-        print(f"El número {numero} ha sido eliminado por ser menor o igual a 0.")
+        print(f"El número {numero} ha sido eliminado por ser menor")
         
-numeros.sort
+numeros.sort()
 
 intervalo_completo = []
 
@@ -29,4 +30,5 @@ for i in range(len(numeros) - 1):
 if numeros:
     intervalo_completo.append(numeros[-1])
 
+intervalo_completo.sort(reverse=True)
 print(intervalo_completo)
