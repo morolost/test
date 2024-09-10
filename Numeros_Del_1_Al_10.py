@@ -12,25 +12,26 @@ def mostrar_10_al_1():
 mostrar_10_al_1()
 
 os.system("pause")
+os.system("cls")
 
 mostrar_1_al_10()
 
 os.system("pause")
+os.system("cls")
 
-def mostrar_numeros_ascendente():
-    inicio = int(input("Introduce el número de inicio(menor): "))
-    fin = int(input("Introduce el número de fin(mayor): "))
+def mostrar_numeros_ascendente(): 
     for i in range(inicio, fin + 1):
         print(i)
 
 def mostrar_numeros_descendente():
-    inicio = int(input("Introduce el número de inicio(mayor): "))
-    fin = int(input("Introduce el número de fin(menor): "))
     for i in range(inicio, fin - 1, -1):
         print(i)
         
-mostrar_numeros_ascendente()
 
-os.system("pause")
 
-mostrar_numeros_descendente()
+inicio = int(input("Introduce el número de inicio: "))
+fin = int(input("Introduce el número de fin: "))
+if inicio >= fin:
+    mostrar_numeros_descendente()
+else:
+    mostrar_numeros_ascendente()
